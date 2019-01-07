@@ -1,15 +1,18 @@
-var laforma = document.getElementById('the-form');
+const laforma = document.querySelector('#the-form');
+
 console.log(laforma);
 
-laforma.addEventListener('submit', function (event) {
-    event.preventDefault();
-    var okidokey = confirm('All Ok?');
-    console.log(okidokey);
-    if(okidokey === true) {
-        console.log('All is Ok!');
+
+laforma.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const okidokey = confirm('all Ok?');
+
+    if (okidokey === true) {
+        console.log('all is Ok!');
     } else {
         console.log('Nothing is good!');
     }
-    var name = prompt('What is your name?');
+
+    const name = prompt('What is your name?');
     console.log(name);
 });
